@@ -32,7 +32,3 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Generating docs
 
 Run `npm run docs` to generate the documentation for the project, using compodoc. It will generate a /documentation folder, which will be served by the npm module http-server on port 8080. Navigate to `http://localhost:8080/`
-
-## Comments regarding the design (topic 2.3.1)
-
-The design chosen for this project was a simple notification box on the bottom right of the screen, which has an internal scroll in case the number of notifications exceeds the height of the screen. The mockup can be found in the mockup.png image, generated using MockFlow
