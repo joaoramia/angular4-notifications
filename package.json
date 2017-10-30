@@ -1,6 +1,9 @@
 {
-  "name": "notifications",
-  "version": "0.0.0",
+  "name": "angular4-notifications",
+  "version": "1.0.0",
+  "engines": {
+    "node": "8.4.0"
+  },
   "license": "MIT",
   "scripts": {
     "ng": "ng",
