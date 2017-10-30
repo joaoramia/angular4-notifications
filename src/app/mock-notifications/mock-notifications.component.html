@@ -1,0 +1,25 @@
+<div class="mock-notifications">
+  <h4>Generate a new notification!</h4>
+  <div class="form-group">
+    <label for="header">Head</label>
+    <input [(ngModel)]="notification.head" name="header" type="text" class="form-control" id="header" required>
+    <span class="error" *ngIf="missingHead">Head is required</span>
+  </div>
+
+  <div class="form-group">
+    <label for="body">Body</label>
+    <input [(ngModel)]="notification.body" name="body" type="text" class="form-control" id="body" [required]="true">
+    <span class="error" *ngIf="missingBody">Body is required</span>
+  </div>
+
+  <div class="form-group">
+    <label for="selectType">Select list:</label>
+    <select [(ngModel)]="notification.type" name="type" class="form-control" id="selectType" [required]="true">
+      <option selected>info</option>
+      <option>warning</option>
+      <option>error</option>
+    </select>
+  </div>
+
+  <button type="submit" class="btn" (click)="submitNotification()">Submit</button>  
+</div>

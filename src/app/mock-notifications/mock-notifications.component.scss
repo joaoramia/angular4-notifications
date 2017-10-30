@@ -1,0 +1,15 @@
+.mock-notifications {
+    max-width: 350px;
+    font-family: Verdana;
+    padding: 30px;
+    margin: 20px;
+    background-color: rgba(38, 38, 40, 0.9);
+    color: rgba(250,250,250,1);
+    text-align: left;
+
+    .error {
+        color: rgba(205,60,60,1);
+        font-size: 13px;
+        font-weight: bold;
+    }
+}

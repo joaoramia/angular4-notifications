@@ -1,0 +1,22 @@
+
+<div class="notification-component">
+    <div [class]="'notification bounce ' + notification.type" *ngFor="let notification of notifications; let i = index">
+        
+        <span class="closebtn" (click)="closeItem($event)">&times;</span>
+        
+        <!-- Notification Styling: each item will have its type in the class (info, warning or error) -->
+        <div [class]="'notification-item ' + notification.type">
+            <div class="notification-icon">
+                <i class="fa fa-info-circle" aria-hidden="true" *ngIf="notification.type === 'info'"></i>
+                <i class="fa fa-exclamation-triangle" aria-hidden="true" *ngIf="notification.type === 'warning'"></i>
+                <i class="fa fa-bug" aria-hidden="true" *ngIf="notification.type === 'error'"></i>
+            </div>
+            <div class="notification-header">
+                {{ notification.head }}
+            </div>
+            <div class="notification-body">
+                {{ notification.body }}
+            </div>
+        </div>
+    </div>
+</div>

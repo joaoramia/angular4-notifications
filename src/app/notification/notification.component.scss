@@ -1,0 +1,66 @@
+
+.notification-component {
+    width: 300px;
+    position: fixed;
+    overflow: scroll;
+    max-height: 100%;
+    bottom: 0;
+    right: 0;
+    
+    font-family: 'Verdana';
+
+    .notification {
+        padding: 20px;
+        background-color: #f44336;
+        color: white;
+        opacity: 1;
+        transition: opacity 0.6s;
+        margin-bottom: 15px;
+
+        .closebtn {
+            margin-left: 15px;
+            color: white;
+            font-weight: bold;
+            float: right;
+            font-size: 22px;
+            line-height: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .notification-header {
+            font-size: 16px;
+        }
+        .notification-body {
+            font-size: 11px;
+        }
+    }
+
+    .notification::after {
+        -webkit-transform: scale3d(5, 5, 5);
+        transform: scale3d(5);
+    }
+
+    // each type of notification will have a different background
+    .notification.error {background-color: rgba(226, 52, 52, 0.9);}
+    .notification.info {background-color: rgba(26, 155, 203, 0.9);}
+    .notification.warning {background-color: rgba(255, 152, 0, 0.9);}
+
+    // Animation for generating a new notification ---------
+    @keyframes slideInFromRight {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+    .notification {  
+        // This section calls the slideInFromRight animation we defined above
+        animation: 0.3s ease-out 0s 1 slideInFromRight;
+    }
+
+    // Responsive (so it does not overlay on the mock notification button:
+    @media only screen and (max-width: 650px) {
+        top: 390px;
+    }
+}
