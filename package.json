@@ -12,8 +12,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "docs": "compodoc -p tsconfig.json && http-server ./documentation",
-    "tsc": "tsc"
+    "docs": "compodoc -p tsconfig.json && http-server ./documentation"
   },
   "private": true,
   "dependencies": {
