@@ -6,9 +6,9 @@
   },
   "license": "MIT",
   "scripts": {
+    "ng": "ng",
     "preinstall": "npm install -g http-server",
     "postinstall": "ng build --prod",
-    "ng": "ng",
     "start": "http-server dist/",
     "build": "ng build",
     "test": "ng test",
