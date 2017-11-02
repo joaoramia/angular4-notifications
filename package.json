@@ -14,7 +14,7 @@
     "e2e": "ng e2e",
     "docs": "compodoc -p tsconfig.json && http-server ./documentation",
     "start": "node server.js",
-    "heroku-postinstall": "ng build --aot -prod"
+    "postinstall": "ng build --aot --target=production"
   },
   "private": true,
   "dependencies": {
